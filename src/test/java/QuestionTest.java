@@ -10,11 +10,10 @@ import static org.junit.Assert.assertTrue;
 
 public class QuestionTest {
 
+    private final String questionText = "Оплата услуг";
     private MainPage mainPage;
     private HelpPage helpPage;
     private ResultsPage resultsPage;
-
-    private final String questionText = "Оплата услуг";
 
     @Before
     public void setUp() {
@@ -30,7 +29,7 @@ public class QuestionTest {
     }
 
     @Test
-    public void questionTest(){
+    public void questionTest() {
         mainPage.goToHelp();
         helpPage = open("https://voronezh.rt.ru/help", HelpPage.class);
         helpPage.clickToQuestionBox(questionText);

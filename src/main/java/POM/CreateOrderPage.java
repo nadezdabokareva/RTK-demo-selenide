@@ -26,7 +26,7 @@ public class CreateOrderPage {
     private SelenideElement errorPhone;
 
     public boolean textFromTitleOrder() {
-       tariffTitle.shouldHave(Condition.text("Облачный"));
+        tariffTitle.shouldHave(Condition.text("Облачный"));
         return true;
     }
 

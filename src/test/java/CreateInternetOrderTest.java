@@ -10,13 +10,12 @@ import static org.junit.Assert.assertTrue;
 
 public class CreateInternetOrderTest {
 
-    private MainPage mainPage;
-    private HomeInternetPage homeInternetPage;
-    private CreateOrderPage createOrderPage;
-
     private final String address = "г Воронеж, ул Минская, д 100000";
     private final String name = "Иванов Иван Иваныч";
     private final String phone = "7900000000";
+    private MainPage mainPage;
+    private HomeInternetPage homeInternetPage;
+    private CreateOrderPage createOrderPage;
 
     @Before
     public void setUp() {
@@ -40,7 +39,7 @@ public class CreateInternetOrderTest {
 
     @Test
     public void creatingInternetOrderWithoutFieldsTest() {
-       createOrderPage.fillOrder(address, name, phone);
-       assertTrue(createOrderPage.errorMessagesIsVisible());
+        createOrderPage.fillOrder(address, name, phone);
+        assertTrue(createOrderPage.errorMessagesIsVisible());
     }
 }

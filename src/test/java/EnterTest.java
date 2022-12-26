@@ -5,15 +5,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static org.junit.Assert.assertTrue;
 
 public class EnterTest {
 
+    private final String number = "12121212";
     private MainPage mainPage;
     private AuthPage authPage;
-
-    private final String number = "12121212";
 
     @Before
     public void setUp() {
@@ -47,7 +45,7 @@ public class EnterTest {
                 "1*b7k0si*_ga*MTgwNDQ5NzAwLjE2Njk2NDI5MDU." +
                 "*_ga_9G5GWSHJG0*MTY2OTY0MjkwNS4xLjAuMTY2OTY0MjkwNy41OC4wLjA.", AuthPage.class);
         authPage.setNumberOrEmail(number)
-                        .getCode();
+                .getCode();
         assertTrue(authPage.getErrorText());
     }
 }

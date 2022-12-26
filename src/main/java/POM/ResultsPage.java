@@ -11,7 +11,7 @@ public class ResultsPage {
     @FindBy(how = How.CLASS_NAME, using = "rt-font-h3")
     private SelenideElement results;
 
-    public boolean getTextFromResultsPage () {
+    public boolean getTextFromResultsPage() {
         $(byText("Результаты поиска")).getText();
         return true;
     }
